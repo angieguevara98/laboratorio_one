@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".OrderActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinner_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/android_layout_arrays"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="Seleccionar...">
+        </Spinner>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo Masa"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/masaGruesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tipomasa"
+                android:text="Masa gruesa"/>
+
+            <RadioButton
+                android:id="@+id/masaDelgada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tipomasa"
+                android:text="Masa delgada"/>
+
+            <RadioButton
+                android:id="@+id/masaArtesanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tipomasa"
+                android:text="Masa artesanal"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="Complementos"/>
+
+        <CheckBox
+            android:id="@+id/extraQueso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="obtenemoscomplementos"
+            android:text="Extra queso mozzarella"/>
+
+        <CheckBox
+            android:id="@+id/extraJamon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="obtenemoscomplementos"
+            android:text="Extra jamón"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección de Envio" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Ordenar"
+            android:onClick="showvalue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>
